@@ -1,0 +1,61 @@
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffe6e6; /* Light pink background */
+  font-family: Arial, sans-serif;
+}
+
+/* Heart Container */
+.heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Heart Shape */
+.heart {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #ff4d4d;
+  transform: rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #ff4d4d;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -75px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 75px;
+}
+
+/* Text in the Heart */
+.heart-text {
+  position: absolute;
+  transform: rotate(45deg); /* Rotate back to normal alignment */
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  z-index: 1; /* Ensure text stays on top */
+}
